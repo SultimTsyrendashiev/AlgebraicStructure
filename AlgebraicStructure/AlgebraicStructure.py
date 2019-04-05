@@ -65,16 +65,16 @@ def checkAssociativity(table):
 def checkIdentity(table):
     elemCount = len(table)
 
-    # there must exist such x
-    for x in range(elemCount):
-        # that for each y : x*y = y
+    # there must exist such e
+    for e in range(elemCount):
+        # that for each y : e*y = y*e = y
         isIdentity = True
         for y in range(elemCount):
-            isIdentity = isIdentity and table[x][y] == y
+            isIdentity = isIdentity and table[e][y] == y and table[y][e] == y
         # if all are equal
         if (isIdentity):
             # return answer and identity
-            return (True, x)
+            return (True, e)
 
     # such x doesn't exist
     return (False, -1)
@@ -84,10 +84,10 @@ def checkInvertibility(table, e):
 
     # for each x
     for x in range(elemCount):
-        # try to find such y that x*y=e
+        # try to find such y that x*y = y*x = e
         hasInv = False
         for y in range(elemCount):
-            hasInv = hasInv or table[x][y] == e
+            hasInv = hasInv or (table[x][y] == e and table[y][x] == e)
         # if doesn't have
         if not hasInv:
             return False
