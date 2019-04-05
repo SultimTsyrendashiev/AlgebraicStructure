@@ -8,3 +8,8 @@ Available:
 - Commutative monoid
 - Group
 - Abelian group
+
+Input: text file with cayley table
+Example:
+0 1
+0 1
