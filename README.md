@@ -10,6 +10,7 @@ Available:
 - Abelian group
 
 Input: text file with cayley table
-Example:
-0 1
-0 1
+
+Example: <br />
+0 1 <br />
+0 1 <br />
